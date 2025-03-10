@@ -1,0 +1,69 @@
+name: Regression Report
+description: Report a bug or some other form of regression
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking your time to report your issue.
+        Please only submit it if you can reproduce it with a fresh install, without any additional mods.
+  - type: input
+    id: system-info
+    attributes:
+      label: System information
+      description: "What operating system do you use?"
+      placeholder: "Windows XP"
+    validations:
+      required: true
+  - type: dropdown
+    id: modpack-info
+    attributes:
+      label: Modpack version
+      options:
+        - "1.21.4-0"
+    validations:
+      required: true
+  - type: textarea
+    id: describe-bug
+    attributes:
+      label: Describe the bug
+      description: | 
+        A clear and concise description of what the bug is. You can paste screenshots if it helps explain the bug.
+      placeholder: Tell us what happened!
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: To reproduce
+      description: "Steps to reproduce the behavior:"
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: | 
+        If applicable, please include any relevant log output. You can also upload your logs to `mclo.gs` automatically 
+        by clicking "Upload" in Prism or MultiMC - please include the link to the log.
+      render: sh
+    validations:
+      required: false
+  - type: checkboxes
+    id: pure
+    attributes:
+      label: Please confirm
+      options:
+        - label: I can reproduce this with a fresh install
+          required: true
