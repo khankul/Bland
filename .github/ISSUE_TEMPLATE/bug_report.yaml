@@ -1,4 +1,4 @@
-name: Regression Report
+name: Regression report
 description: Report a bug or some other form of regression
 body:
   - type: markdown
@@ -65,5 +65,5 @@ body:
     attributes:
       label: Please confirm
       options:
-        - label: I can reproduce this with a fresh install
+        - label: I can reproduce this with a fresh, pristine install
           required: true
